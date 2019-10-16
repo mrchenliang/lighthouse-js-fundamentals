@@ -1,13 +1,23 @@
 const squareCode = function(message) {
   message = message.replace(/[-_ ]/g, "");
   let length = Math.ceil(Math.sqrt(message.length));
-  result = "";
+  let temp = "";
+  let result = " ";
   for (let i = 0; i < message.length; i++) {
-    if ((i+1) % length === 0) {
-      result += message[i] + " ";
+    if ((i + 1) % length === 0) {
+      temp += message[i] + " ";
     } else {
-      result += message[i];
+      temp += message[i];
     }
+  }
+  let answer = temp.split(" ");
+  for (let j = 0; j < length; j++) {
+    for (let k = 0; k < answer.length; k++) {
+      if (answer[k][j]) {
+        result += answer[k][j];
+      }
+    }
+    result += " ";
   }
 
   return result;
