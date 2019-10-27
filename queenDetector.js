@@ -18,7 +18,7 @@ function boardMaker(len) {
   return board;
 } 
 
-const queen1 = [8, 8];
+const queen1 = [3, 4];
 const queen2 = [1, 1];
 
 function queenThreat(queen1, queen2) {
@@ -66,4 +66,4 @@ function queenThreat(queen1, queen2) {
   return false;
 }
 
-queenThreat(queen1, queen2);
+console.log(queenThreat(queen1, queen2));
